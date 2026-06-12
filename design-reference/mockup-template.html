@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="6149e1bd-721f-493c-91cf-2c172b0f8d5a"></script>
+</head>
+<body>
+
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("6b5ceb63-c8e7-47d3-9883-a1a34a8d05f7") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("706f2622-78aa-40e2-a4fe-1cb0c571e2d0") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("6a7d4192-1887-41b4-8ce5-028b35f6c81e") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("84835365-d62d-4a0a-b817-48b8cf409c8e") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("8879c293-23a9-4c43-9fbe-cf8dbfa871d2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("8dd183d9-e9ee-4c5d-8ce1-0941bbb66113") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("05d22df7-5ef0-4ae5-bf6c-057da3017e11") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("2730b512-2ad9-456e-ae70-1050f48db964") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("84835365-d62d-4a0a-b817-48b8cf409c8e") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("8879c293-23a9-4c43-9fbe-cf8dbfa871d2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("8dd183d9-e9ee-4c5d-8ce1-0941bbb66113") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("05d22df7-5ef0-4ae5-bf6c-057da3017e11") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("2730b512-2ad9-456e-ae70-1050f48db964") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("84835365-d62d-4a0a-b817-48b8cf409c8e") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("8879c293-23a9-4c43-9fbe-cf8dbfa871d2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("8dd183d9-e9ee-4c5d-8ce1-0941bbb66113") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("05d22df7-5ef0-4ae5-bf6c-057da3017e11") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("2730b512-2ad9-456e-ae70-1050f48db964") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("84835365-d62d-4a0a-b817-48b8cf409c8e") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("8879c293-23a9-4c43-9fbe-cf8dbfa871d2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("8dd183d9-e9ee-4c5d-8ce1-0941bbb66113") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("05d22df7-5ef0-4ae5-bf6c-057da3017e11") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("2730b512-2ad9-456e-ae70-1050f48db964") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("1fe9780f-9d4a-463b-9e62-49e3d6e36e38") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("3f711c08-0236-4c38-9271-9aa8daeab0ec") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e21a676b-0a20-41e0-8eb7-a5340db66fcc") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("1c6180aa-ae5d-40d7-bcc7-7f19debe2d69") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("b41bf3fc-a29b-443f-9c15-1c3d36a37047") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("736b432d-236e-4c2f-a888-07ec8df218a0") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("8bdd60aa-41e9-4e0b-9c3a-1bdea17afa2e") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  @keyframes adm-blink { 0%,100%{ opacity:1 } 50%{ opacity:.2 } }
+  @keyframes adm-jit { 0%{ transform: translate(0,0) } 25%{ transform: translate(-1px,1px) } 50%{ transform: translate(1px,-1px) } 75%{ transform: translate(-1px,0) } 100%{ transform: translate(0,1px) } }
+  @keyframes adm-pop { 0%{ transform: scale(.7) rotate(-4deg) } 60%{ transform: scale(1.08) rotate(2deg) } 100%{ transform: scale(1) rotate(-1.5deg) } }
+</style>
+</helmet>
+<div style="min-height:100vh; background:#efefef; font-family:'Oswald',sans-serif; color:#0a0a0a; position:relative; overflow-x:hidden;">
+
+  <div style="position:fixed; inset:0; pointer-events:none; z-index:50; opacity:.10; mix-blend-mode:multiply; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
+
+  <div style="max-width:480px; margin:0 auto; padding:0 0 84px; position:relative; z-index:1;">
+
+    <sc-if value="{{ isIndex }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="Inicio">
+
+      <div style="display:flex; justify-content:flex-start; padding:14px 16px 0;">
+        <div style="transform:rotate(-5deg); border:3px solid #0a0a0a; background:#0a0a0a; color:#fff; padding:4px 8px; font-family:'Anton',sans-serif; line-height:.92; text-align:center; box-shadow:3px 3px 0 #ff0080;">
+          <div style="color:#ff0080; font-size:11px; letter-spacing:.05em;">ALERTA</div>
+          <div style="font-size:13px; letter-spacing:.02em;">HUMOR NEGRO</div>
+          <div style="background:#ff0080; color:#0a0a0a; font-size:15px; margin-top:2px;">18+</div>
+        </div>
+      </div>
+
+      <div style="padding:6px 16px 0;">
+        <div style="font-family:'Anton',sans-serif; font-size:62px; line-height:.86; letter-spacing:-.01em; text-transform:uppercase; word-break:break-word;">
+          AMIGOS<span style="display:inline-block; background:#0a0a0a; color:#fff; font-size:26px; vertical-align:middle; padding:2px 7px; margin:0 6px; transform:translateY(-6px) rotate(-4deg);">DE</span><span style="color:#ff0080;">MIERDA</span>
+        </div>
+      </div>
+
+      <div style="position:relative; margin:22px 16px 0; padding:24px 20px 28px; background:#0a0a0a; color:#fff; transform:rotate(-1.4deg); box-shadow:6px 6px 0 rgba(255,0,128,.35); clip-path:polygon(0 4%,12% 0,30% 5%,52% 0,72% 5%,90% 1%,100% 4%,100% 96%,88% 100%,68% 95%,46% 100%,26% 95%,10% 100%,0 96%);">
+        <div style="font-family:'Anton',sans-serif; font-size:22px; text-transform:uppercase; letter-spacing:.02em; transform:rotate(1.4deg);">Entrá al caos</div>
+        <button onclick="{{ go_lobby }}" style="display:block; width:100%; margin-top:16px; padding:18px; background:#ff0080; color:#0a0a0a; border:3px solid #fff; font-family:'Anton',sans-serif; font-size:26px; text-transform:uppercase; letter-spacing:.03em; cursor:pointer; transform:rotate(1.4deg); box-shadow:4px 4px 0 #fff;">Crear sala</button>
+
+        <div style="display:flex; align-items:center; gap:10px; margin:18px 0 6px; transform:rotate(1.4deg);">
+          <div style="flex:1; height:2px; background:#444;"></div>
+          <div style="font-family:'Anton',sans-serif; font-size:14px; color:#888;">O</div>
+          <div style="flex:1; height:2px; background:#444;"></div>
+        </div>
+
+        <div style="display:flex; gap:8px; transform:rotate(1.4deg);">
+          <input value="{{ join }}" oninput="{{ on_join }}" placeholder="A4F3" maxlength="4" style="width:0; flex:1; min-width:0; padding:14px; background:#fff; color:#0a0a0a; border:3px solid #fff; font-family:'Space Mono',monospace; font-weight:700; font-size:24px; letter-spacing:.18em; text-align:center; text-transform:uppercase; outline:none;">
+          <button onclick="{{ go_lobby }}" style="padding:0 16px; background:#fff; color:#0a0a0a; border:3px solid #fff; font-family:'Anton',sans-serif; font-size:16px; text-transform:uppercase; line-height:1; cursor:pointer; clip-path:polygon(0 6%,100% 0,97% 94%,3% 100%);">Unirse<br>a sala</button>
+        </div>
+      </div>
+
+      <div style="margin:34px 0 0; padding:30px 16px 36px; background:#dadada; position:relative; clip-path:polygon(0 3%,8% 0,18% 4%,30% 1%,42% 5%,55% 1%,68% 5%,80% 1%,90% 4%,100% 1%,100% 97%,92% 100%,80% 96%,68% 100%,55% 96%,42% 100%,30% 96%,18% 100%,8% 96%,0 99%);">
+        <div style="font-family:'Anton',sans-serif; font-size:30px; line-height:.95; text-transform:uppercase; color:#0a0a0a;">¿Cómo se <span style="color:#ff0080;">juega</span>?</div>
+
+        <div style="display:flex; align-items:flex-start; gap:14px; margin-top:24px;">
+          <div style="flex:0 0 auto; width:54px; height:54px; border:4px solid #0a0a0a; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Anton',sans-serif; font-size:30px;">1</div>
+          <div style="flex:1; font-weight:600; font-size:17px; line-height:1.2; text-transform:uppercase; padding-top:4px;">Un jugador roba una carta del mazo y la <span style="color:#ff0080;">lee en voz alta</span>.</div>
+          <svg width="48" height="48" viewBox="0 0 64 64" fill="none" style="flex:0 0 auto;"><path d="M6 24h10l26-12v40L16 40H6z" fill="#ff0080"></path><path d="M46 22c5 3 5 17 0 20" stroke="#ff0080" stroke-width="3"></path><path d="M52 16c9 6 9 26 0 32" stroke="#ff0080" stroke-width="3"></path></svg>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:14px; margin-top:22px;">
+          <div style="flex:0 0 auto; width:54px; height:54px; border:4px solid #0a0a0a; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Anton',sans-serif; font-size:30px;">2</div>
+          <div style="flex:1; font-weight:600; font-size:17px; line-height:1.2; text-transform:uppercase; padding-top:4px;">Todos (incluso quien leyó la carta) se toman unos <span style="color:#ff0080;">segundos</span> para pensar la respuesta.</div>
+          <svg width="48" height="48" viewBox="0 0 64 64" fill="none" style="flex:0 0 auto;"><rect x="27" y="6" width="10" height="6" fill="#ff0080"></rect><circle cx="32" cy="37" r="21" stroke="#ff0080" stroke-width="4"></circle><path d="M32 37V21" stroke="#ff0080" stroke-width="4"></path><path d="M47 14l5 5" stroke="#ff0080" stroke-width="4"></path></svg>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:14px; margin-top:22px;">
+          <div style="flex:0 0 auto; width:54px; height:54px; border:4px solid #0a0a0a; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Anton',sans-serif; font-size:30px;">3</div>
+          <div style="flex:1; font-weight:600; font-size:17px; line-height:1.2; text-transform:uppercase; padding-top:4px;">A la cuenta de 3 todos votan <span style="color:#ff0080;">señalando con el dedo</span> al jugador que eligen.</div>
+          <svg width="48" height="48" viewBox="0 0 64 64" fill="#ff0080" style="flex:0 0 auto;"><path d="M30 8c-3 0-5 2-5 5v20l-6-4c-4-2-8 3-4 7l12 15c2 3 5 4 9 4h8c5 0 9-4 9-9V24c0-3-4-3-4 0v4c0-3-4-3-4 0v-2c0-3-4-3-4 0v-2c0-3-4-3-4 0V13c0-3-2-5-6-5z"></path></svg>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; gap:14px; margin-top:22px;">
+          <div style="flex:0 0 auto; width:54px; height:54px; border:4px solid #0a0a0a; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Anton',sans-serif; font-size:30px;">4</div>
+          <div style="flex:1; font-weight:600; font-size:17px; line-height:1.2; text-transform:uppercase; padding-top:4px;">El más apuntado es el “ganador” y se queda con la carta, frente suyo.</div>
+          <svg width="48" height="48" viewBox="0 0 64 64" style="flex:0 0 auto;"><path d="M20 10 L52 16 L44 56 L12 50 Z" fill="#0a0a0a"></path><path d="M22 28 L42 32 M21 36 L40 40" stroke="#fff" stroke-width="2.5"></path></svg>
+        </div>
+      </div>
+
+      <div style="margin:0; padding:26px 16px 30px; background:#0a0a0a; color:#fff; clip-path:polygon(0 0,100% 6%,100% 100%,0 100%);">
+        <div style="font-weight:600; font-size:18px; line-height:1.25; text-transform:uppercase;">La partida termina cuando un jugador gana <span style="color:#ff0080; font-family:'Anton',sans-serif;">5 cartas</span>. Ese jugador es coronado como Amigo de Mierda.</div>
+      </div>
+
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isLobby }}">
+    <div data-screen-label="Lobby">
+      <div style="padding:24px 16px 0;">
+        <div style="font-family:'Anton',sans-serif; font-size:30px; line-height:.92; text-transform:uppercase;">Concentrando<br><span style="color:#ff0080;">amigos...</span></div>
+      </div>
+
+      <div style="margin:20px 16px 0; padding:22px 16px; background:#0a0a0a; transform:rotate(-1.2deg); box-shadow:6px 6px 0 rgba(255,0,128,.35); clip-path:polygon(0 6%,18% 0,40% 5%,64% 0,86% 5%,100% 1%,100% 94%,82% 100%,58% 95%,34% 100%,14% 95%,0 99%);">
+        <div style="font-family:'Oswald',sans-serif; font-weight:700; font-size:12px; letter-spacing:.3em; color:#888; text-transform:uppercase; transform:rotate(1.2deg);">Código de sala</div>
+        <div style="font-family:'Anton',sans-serif; font-size:72px; line-height:.9; letter-spacing:.12em; color:#ff0080; text-transform:uppercase; transform:rotate(1.2deg); text-align:center;">A4F3</div>
+      </div>
+
+      <div style="margin:26px 16px 0;">
+        <div style="display:inline-block; background:#0a0a0a; color:#fff; font-family:'Anton',sans-serif; font-size:18px; letter-spacing:.08em; padding:4px 12px; white-space:nowrap; transform:rotate(-2deg);">SE BUSCA</div>
+        <div style="margin-top:14px; display:flex; flex-direction:column; gap:10px;">
+          <sc-for list="{{ lobbyPlayers }}" as="p" hint-placeholder-count="5">
+            <div style="display:flex; align-items:center; gap:12px; border-bottom:3px solid #0a0a0a; padding-bottom:8px;">
+              <div style="width:34px; height:34px; flex:0 0 auto; border:3px solid #0a0a0a; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Anton',sans-serif; font-size:15px;">{{ p.posLabel }}</div>
+              <div style="flex:1; font-family:'Permanent Marker',cursive; font-size:26px; line-height:1; transform:rotate(-1deg);">{{ p.name }}</div>
+              <sc-if value="{{ p.host }}"><div style="background:#ff0080; color:#0a0a0a; font-family:'Anton',sans-serif; font-size:12px; letter-spacing:.06em; padding:3px 8px; transform:rotate(2deg);">HOST</div></sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="margin:30px 16px 0;">
+        <button onclick="{{ go_game }}" style="width:100%; padding:20px; background:#ff0080; color:#0a0a0a; border:4px solid #0a0a0a; font-family:'Anton',sans-serif; font-size:28px; text-transform:uppercase; letter-spacing:.03em; cursor:pointer; box-shadow:5px 5px 0 #0a0a0a;">Iniciar caos</button>
+        <div style="margin-top:10px; text-align:center; font-weight:500; font-size:12px; letter-spacing:.06em; color:#777; text-transform:uppercase;">Los demás lo ven deshabilitado en gris</div>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isGame }}">
+    <div data-screen-label="Juego">
+      <div style="padding:22px 16px 0; text-align:center;">
+        <div style="display:inline-block; font-family:'Space Mono',monospace; font-weight:700; font-size:15px; letter-spacing:.12em; color:#ff0080; text-transform:uppercase; border:2px solid #ff0080; padding:6px 12px; animation:adm-blink 1s steps(1) infinite;">Tiempo para votar: 3</div>
+      </div>
+
+      <div style="margin:18px 16px 0; padding:38px 22px; background:#0a0a0a; color:#fff; min-height:230px; display:flex; align-items:center; justify-content:center; text-align:center; transform:rotate(-1deg); box-shadow:7px 7px 0 rgba(0,0,0,.25); clip-path:polygon(0 2%,30% 0,62% 3%,100% 0,99% 97%,68% 100%,34% 96%,2% 100%);">
+        <div style="font-weight:700; font-size:30px; line-height:1.12; text-transform:uppercase; transform:rotate(1deg);">{{ question }}</div>
+      </div>
+
+      <div style="margin:26px 16px 0;">
+        <div style="font-family:'Anton',sans-serif; font-size:16px; letter-spacing:.06em; text-transform:uppercase; color:#0a0a0a;">Apuntá a un <span style="color:#ff0080;">amigo</span></div>
+        <div style="margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <sc-for list="{{ voteItems }}" as="opt" hint-placeholder-count="6">
+            <button onclick="{{ opt.pick }}" style="{{ opt.style }}">{{ opt.name }}</button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="margin:24px 16px 0;">
+        <sc-if value="{{ voteReady }}" hint-placeholder-val="{{ true }}">
+          <button onclick="{{ castVote }}" style="width:100%; padding:20px; background:#ff0080; color:#0a0a0a; border:4px solid #0a0a0a; font-family:'Anton',sans-serif; font-size:28px; text-transform:uppercase; letter-spacing:.04em; cursor:pointer; box-shadow:5px 5px 0 #0a0a0a;">Yo voto</button>
+        </sc-if>
+        <sc-if value="{{ voteNotReady }}">
+          <button disabled="" style="width:100%; padding:20px; background:#bdbdbd; color:#7c7c7c; border:4px solid #9a9a9a; font-family:'Anton',sans-serif; font-size:28px; text-transform:uppercase; letter-spacing:.04em; cursor:not-allowed;">Yo voto</button>
+        </sc-if>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isResults }}">
+    <div data-screen-label="Votos">
+      <div style="padding:22px 16px 0;">
+        <div style="background:#0a0a0a; color:#fff; padding:20px 16px 16px; font-weight:700; font-size:17px; line-height:1.15; text-transform:uppercase; transform:rotate(-1deg); clip-path:polygon(0 6%,100% 0,100% 94%,0 100%);">{{ question }}</div>
+      </div>
+
+      <div style="text-align:center; margin:26px 16px 0;">
+        <div style="font-family:'Anton',sans-serif; font-size:20px; letter-spacing:.04em; text-transform:uppercase; color:#0a0a0a;">El amigo de mierda</div>
+        <div style="font-family:'Anton',sans-serif; font-size:20px; letter-spacing:.04em; text-transform:uppercase; color:#ff0080;">de esta ronda es...</div>
+      </div>
+
+      <div style="margin:16px 16px 0; background:#ff0080; border:5px solid #0a0a0a; padding:22px 12px; text-align:center; transform:rotate(-1.5deg); box-shadow:7px 7px 0 #0a0a0a;">
+        <div style="font-family:'Anton',sans-serif; font-size:64px; line-height:.9; color:#0a0a0a; text-transform:uppercase; letter-spacing:.02em;">NACHO</div>
+        <div style="font-family:'Space Mono',monospace; font-weight:700; font-size:14px; letter-spacing:.1em; color:#0a0a0a; text-transform:uppercase;">4 de 5 votos</div>
+      </div>
+
+      <div style="margin:30px 16px 0; display:flex; justify-content:space-between; align-items:flex-end; gap:4px;">
+        <div style="text-align:center; transform:rotate(18deg);"><svg width="46" height="46" viewBox="0 0 64 64" fill="#ff0080"><path d="M30 8c-3 0-5 2-5 5v20l-6-4c-4-2-8 3-4 7l12 15c2 3 5 4 9 4h8c5 0 9-4 9-9V24c0-3-4-3-4 0v4c0-3-4-3-4 0v-2c0-3-4-3-4 0v-2c0-3-4-3-4 0V13c0-3-2-5-6-5z"></path></svg><div style="font-family:'Permanent Marker',cursive; font-size:14px; margin-top:2px;">Tú</div></div>
+        <div style="text-align:center; transform:rotate(8deg);"><svg width="46" height="46" viewBox="0 0 64 64" fill="#ff0080"><path d="M30 8c-3 0-5 2-5 5v20l-6-4c-4-2-8 3-4 7l12 15c2 3 5 4 9 4h8c5 0 9-4 9-9V24c0-3-4-3-4 0v4c0-3-4-3-4 0v-2c0-3-4-3-4 0v-2c0-3-4-3-4 0V13c0-3-2-5-6-5z"></path></svg><div style="font-family:'Permanent Marker',cursive; font-size:14px; margin-top:2px;">Sole</div></div>
+        <div style="text-align:center; transform:rotate(-8deg);"><svg width="46" height="46" viewBox="0 0 64 64" fill="#ff0080"><path d="M30 8c-3 0-5 2-5 5v20l-6-4c-4-2-8 3-4 7l12 15c2 3 5 4 9 4h8c5 0 9-4 9-9V24c0-3-4-3-4 0v4c0-3-4-3-4 0v-2c0-3-4-3-4 0v-2c0-3-4-3-4 0V13c0-3-2-5-6-5z"></path></svg><div style="font-family:'Permanent Marker',cursive; font-size:14px; margin-top:2px;">Mati</div></div>
+        <div style="text-align:center; transform:rotate(-18deg);"><svg width="46" height="46" viewBox="0 0 64 64" fill="#ff0080"><path d="M30 8c-3 0-5 2-5 5v20l-6-4c-4-2-8 3-4 7l12 15c2 3 5 4 9 4h8c5 0 9-4 9-9V24c0-3-4-3-4 0v4c0-3-4-3-4 0v-2c0-3-4-3-4 0v-2c0-3-4-3-4 0V13c0-3-2-5-6-5z"></path></svg><div style="font-family:'Permanent Marker',cursive; font-size:14px; margin-top:2px;">Caro</div></div>
+      </div>
+
+      <div style="margin:30px 16px 0;">
+        <button onclick="{{ go_leaderboard }}" style="width:100%; padding:18px; background:#0a0a0a; color:#fff; border:4px solid #0a0a0a; font-family:'Anton',sans-serif; font-size:24px; text-transform:uppercase; letter-spacing:.04em; cursor:pointer;">Continuar</button>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isLeaderboard }}">
+    <div data-screen-label="Ranking">
+      <div style="padding:24px 16px 0;">
+        <div style="font-family:'Anton',sans-serif; font-size:28px; line-height:1; text-transform:uppercase;">Ranking de <span style="color:#ff0080;">amigos de mierda</span></div>
+        <div style="font-family:'Space Mono',monospace; font-weight:700; font-size:11px; letter-spacing:.14em; color:#666; text-transform:uppercase; margin-top:14px;">Puntos acumulados — primero a 5 gana</div>
+      </div>
+
+      <div style="margin:20px 16px 0; border:4px solid #0a0a0a;">
+        <div style="display:flex; background:#0a0a0a; color:#fff; font-family:'Anton',sans-serif; font-size:13px; letter-spacing:.06em; text-transform:uppercase;">
+          <div style="flex:1; padding:10px 14px;">Nombre de jugador</div>
+          <div style="width:120px; padding:10px 14px; text-align:center; border-left:3px solid #ff0080;">Cartas ganadas</div>
+        </div>
+        <sc-for list="{{ ranking }}" as="r" hint-placeholder-count="6">
+          <div style="{{ r.rowStyle }}">
+            <div style="flex:1; padding:12px 14px; display:flex; align-items:center; gap:10px;">
+              <sc-if value="{{ r.leader }}"><div style="width:38px; height:38px; flex:0 0 auto; background:#0a0a0a; border-radius:50%; display:flex; align-items:center; justify-content:center;"><svg width="24" height="18" viewBox="0 0 64 48"><path d="M6 42 L12 12 L24 28 L32 8 L40 28 L52 12 L58 42 Z" fill="none" stroke="#ff0080" stroke-width="4"></path><path d="M5 42 H59" stroke="#ff0080" stroke-width="5"></path></svg></div></sc-if>
+              <div style="font-family:'Permanent Marker',cursive; font-size:24px; line-height:1;">{{ r.name }}</div>
+            </div>
+            <div style="width:120px; padding:12px 14px; text-align:center; border-left:3px solid #0a0a0a; font-family:'Anton',sans-serif; font-size:30px; line-height:1; color:#ff0080;">{{ r.cards }}<span style="font-size:14px; color:#999;">/5</span></div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin:28px 16px 0;">
+        <button onclick="{{ go_gameover }}" style="width:100%; padding:20px; background:#ff0080; color:#0a0a0a; border:4px solid #0a0a0a; font-family:'Anton',sans-serif; font-size:26px; text-transform:uppercase; letter-spacing:.04em; cursor:pointer; box-shadow:5px 5px 0 #0a0a0a;">Continuar</button>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ isGameover }}">
+    <div data-screen-label="Fin">
+      <div style="padding:26px 16px 0; text-align:center;">
+        <svg width="120" height="84" viewBox="0 0 64 48" style="display:block; margin:0 auto; animation:adm-pop .5s ease-out;"><path d="M6 42 L12 10 L24 28 L32 6 L40 28 L52 10 L58 42 Z" fill="none" stroke="#ff0080" stroke-width="3"></path><path d="M5 42 H59" stroke="#ff0080" stroke-width="5"></path><circle cx="12" cy="10" r="3" fill="#ff0080"></circle><circle cx="32" cy="6" r="3" fill="#ff0080"></circle><circle cx="52" cy="10" r="3" fill="#ff0080"></circle></svg>
+        <div style="font-family:'Anton',sans-serif; font-size:46px; line-height:.86; text-transform:uppercase; margin-top:14px; letter-spacing:-.01em;">Has sido<br>coronado como<br><span style="color:#ff0080;">amigo de mierda</span></div>
+      </div>
+
+      <div style="margin:30px 16px 0; display:flex; align-items:flex-end; justify-content:center; gap:0;">
+        <div style="width:30%; text-align:center;">
+          <div style="font-family:'Permanent Marker',cursive; font-size:16px; margin-bottom:4px;">Nacho</div>
+          <div style="background:#0a0a0a; color:#fff; height:90px; display:flex; align-items:flex-start; justify-content:center; padding-top:8px; font-family:'Anton',sans-serif; font-size:30px; border:3px solid #0a0a0a;">2</div>
+        </div>
+        <div style="width:34%; text-align:center; transform:translateY(0);">
+          <div style="font-family:'Permanent Marker',cursive; font-size:24px; color:#ff0080; margin-bottom:4px;">Sole</div>
+          <div style="background:#ff0080; color:#0a0a0a; height:140px; display:flex; align-items:flex-start; justify-content:center; padding-top:10px; font-family:'Anton',sans-serif; font-size:46px; border:4px solid #0a0a0a; box-shadow:0 0 0 4px #ff0080;">1</div>
+        </div>
+        <div style="width:30%; text-align:center;">
+          <div style="font-family:'Permanent Marker',cursive; font-size:16px; margin-bottom:4px;">Tú</div>
+          <div style="background:#0a0a0a; color:#fff; height:70px; display:flex; align-items:flex-start; justify-content:center; padding-top:8px; font-family:'Anton',sans-serif; font-size:30px; border:3px solid #0a0a0a;">3</div>
+        </div>
+      </div>
+
+      <div style="margin:26px 16px 0; background:#0a0a0a; color:#fff; padding:18px 16px; text-align:center; font-weight:600; font-size:16px; line-height:1.3; text-transform:uppercase; clip-path:polygon(0 0,100% 5%,100% 100%,0 95%);">La partida ha terminado. Un jugador ha ganado <span style="color:#ff0080; font-family:'Anton',sans-serif;">5 cartas</span>.</div>
+
+      <div style="margin:24px 16px 0; display:flex; flex-direction:column; gap:12px;">
+        <button onclick="{{ go_lobby }}" style="width:100%; padding:18px; background:#ff0080; color:#0a0a0a; border:4px solid #0a0a0a; font-family:'Anton',sans-serif; font-size:24px; text-transform:uppercase; letter-spacing:.03em; cursor:pointer; box-shadow:5px 5px 0 #0a0a0a;">Revancha · misma sala</button>
+        <button onclick="{{ go_index }}" style="width:100%; padding:18px; background:#fff; color:#0a0a0a; border:4px solid #0a0a0a; font-family:'Anton',sans-serif; font-size:24px; text-transform:uppercase; letter-spacing:.03em; cursor:pointer;">Salir al menú</button>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- more-screens -->
+
+  </div>
+
+  <div style="position:fixed; left:0; right:0; bottom:0; z-index:40; max-width:480px; margin:0 auto; display:flex; background:#0a0a0a; border-top:4px solid #ff0080;">
+    <sc-for list="{{ navItems }}" as="tab" hint-placeholder-count="6">
+      <button onclick="{{ tab.go }}" style="{{ tab.style }}">{{ tab.label }}</button>
+    </sc-for>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:480,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { screen: 'index', join: '', vote: null, voted: false };
+
+  go(s) { this.setState({ screen: s, voted: false }); try { window.scrollTo(0, 0); } catch(e){} }
+
+  renderVals() {
+    const s = this.state.screen;
+    const players = ['Tú', 'Nacho', 'Sole', 'Mati', 'Caro', 'Bruno'];
+
+    const nav = [
+      { id: 'index', label: 'Inicio' },
+      { id: 'lobby', label: 'Lobby' },
+      { id: 'game', label: 'Juego' },
+      { id: 'results', label: 'Votos' },
+      { id: 'leaderboard', label: 'Ranking' },
+      { id: 'gameover', label: 'Fin' },
+    ];
+    const navItems = nav.map(n => {
+      const active = s === n.id;
+      return {
+        label: n.label,
+        go: () => this.go(n.id),
+        style: `flex:1; min-width:0; padding:11px 2px 9px; background:transparent; border:none; border-top:4px solid ${active ? '#ff0080' : 'transparent'}; margin-top:-4px; color:${active ? '#ff0080' : '#777'}; font-family:'Oswald',sans-serif; font-weight:700; font-size:11px; letter-spacing:.06em; text-transform:uppercase; cursor:pointer;`,
+      };
+    });
+
+    const baseVote = "display:flex; align-items:center; justify-content:center; text-align:center; padding:18px 6px; font-family:'Anton',sans-serif; font-size:21px; letter-spacing:.03em; text-transform:uppercase; border:3px solid #0a0a0a; cursor:pointer; line-height:1;";
+    const voteItems = players.map(p => {
+      const sel = this.state.vote === p;
+      return {
+        name: p,
+        pick: () => this.setState({ vote: p }),
+        style: baseVote + `background:${sel ? '#ff0080' : '#fff'}; color:#0a0a0a; transform:rotate(${sel ? '-1.5deg' : '0deg'}); box-shadow:${sel ? '4px 4px 0 #0a0a0a' : 'none'};`,
+      };
+    });
+
+    const lobbyPlayers = [
+      { name: 'Tú', host: true },
+      { name: 'Nacho', host: false },
+      { name: 'Sole', host: false },
+      { name: 'Mati', host: false },
+      { name: 'Caro', host: false },
+    ].map((p, i) => ({ ...p, posLabel: String(i + 1) }));
+
+    const ranking = [
+      { name: 'Sole', cards: 4 },
+      { name: 'Nacho', cards: 3 },
+      { name: 'Tú', cards: 2 },
+      { name: 'Caro', cards: 1 },
+      { name: 'Mati', cards: 1 },
+      { name: 'Bruno', cards: 0 },
+    ].map((r, i) => ({
+      ...r, pos: i + 1, leader: i === 0,
+      rowStyle: `display:flex; align-items:stretch; border-top:3px solid #0a0a0a; background:${i === 0 ? '#ececec' : '#fff'};`,
+    }));
+
+    return {
+      isIndex: s === 'index', isLobby: s === 'lobby', isGame: s === 'game',
+      isResults: s === 'results', isLeaderboard: s === 'leaderboard', isGameover: s === 'gameover',
+      navItems,
+      go_lobby: () => this.go('lobby'),
+      go_game: () => this.go('game'),
+      go_results: () => this.go('results'),
+      go_leaderboard: () => this.go('leaderboard'),
+      go_gameover: () => this.go('gameover'),
+      go_index: () => this.go('index'),
+      join: this.state.join,
+      on_join: (e) => this.setState({ join: (e.target.value || '').toUpperCase().slice(0, 4) }),
+      voteItems,
+      voteReady: this.state.vote !== null,
+      voteNotReady: this.state.vote === null,
+      voteName: this.state.vote || '',
+      castVote: () => this.go('results'),
+      lobbyPlayers,
+      ranking,
+      question: '¿Quién es más probable que termine en la cárcel?',
+    };
+  }
+}
+</script>
+
+
+</body></html>

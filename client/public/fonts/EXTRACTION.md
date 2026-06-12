@@ -1,0 +1,36 @@
+# Font Extraction Details
+
+The following fonts were extracted from the bundled HTML client file (`AmigosdeMierda.html`) on 2026-06-12T05:06:54.134Z:
+
+- **Anton (400)**: Anton-Regular.woff2 (Source UUID: `6b5ceb63-c8e7-47d3-9883-a1a34a8d05f7`)
+- **Anton (400)**: Anton-Regular.woff2 (Source UUID: `706f2622-78aa-40e2-a4fe-1cb0c571e2d0`)
+- **Anton (400)**: Anton-Regular.woff2 (Source UUID: `6a7d4192-1887-41b4-8ce5-028b35f6c81e`)
+- **Oswald (400)**: Oswald-Regular.woff2 (Source UUID: `84835365-d62d-4a0a-b817-48b8cf409c8e`)
+- **Oswald (400)**: Oswald-Regular.woff2 (Source UUID: `8879c293-23a9-4c43-9fbe-cf8dbfa871d2`)
+- **Oswald (400)**: Oswald-Regular.woff2 (Source UUID: `8dd183d9-e9ee-4c5d-8ce1-0941bbb66113`)
+- **Oswald (400)**: Oswald-Regular.woff2 (Source UUID: `05d22df7-5ef0-4ae5-bf6c-057da3017e11`)
+- **Oswald (400)**: Oswald-Regular.woff2 (Source UUID: `2730b512-2ad9-456e-ae70-1050f48db964`)
+- **Oswald (500)**: Oswald-Medium.woff2 (Source UUID: `84835365-d62d-4a0a-b817-48b8cf409c8e`)
+- **Oswald (500)**: Oswald-Medium.woff2 (Source UUID: `8879c293-23a9-4c43-9fbe-cf8dbfa871d2`)
+- **Oswald (500)**: Oswald-Medium.woff2 (Source UUID: `8dd183d9-e9ee-4c5d-8ce1-0941bbb66113`)
+- **Oswald (500)**: Oswald-Medium.woff2 (Source UUID: `05d22df7-5ef0-4ae5-bf6c-057da3017e11`)
+- **Oswald (500)**: Oswald-Medium.woff2 (Source UUID: `2730b512-2ad9-456e-ae70-1050f48db964`)
+- **Oswald (600)**: Oswald-SemiBold.woff2 (Source UUID: `84835365-d62d-4a0a-b817-48b8cf409c8e`)
+- **Oswald (600)**: Oswald-SemiBold.woff2 (Source UUID: `8879c293-23a9-4c43-9fbe-cf8dbfa871d2`)
+- **Oswald (600)**: Oswald-SemiBold.woff2 (Source UUID: `8dd183d9-e9ee-4c5d-8ce1-0941bbb66113`)
+- **Oswald (600)**: Oswald-SemiBold.woff2 (Source UUID: `05d22df7-5ef0-4ae5-bf6c-057da3017e11`)
+- **Oswald (600)**: Oswald-SemiBold.woff2 (Source UUID: `2730b512-2ad9-456e-ae70-1050f48db964`)
+- **Oswald (700)**: Oswald-Bold.woff2 (Source UUID: `84835365-d62d-4a0a-b817-48b8cf409c8e`)
+- **Oswald (700)**: Oswald-Bold.woff2 (Source UUID: `8879c293-23a9-4c43-9fbe-cf8dbfa871d2`)
+- **Oswald (700)**: Oswald-Bold.woff2 (Source UUID: `8dd183d9-e9ee-4c5d-8ce1-0941bbb66113`)
+- **Oswald (700)**: Oswald-Bold.woff2 (Source UUID: `05d22df7-5ef0-4ae5-bf6c-057da3017e11`)
+- **Oswald (700)**: Oswald-Bold.woff2 (Source UUID: `2730b512-2ad9-456e-ae70-1050f48db964`)
+- **Permanent Marker (400)**: PermanentMarker-Regular.woff2 (Source UUID: `1fe9780f-9d4a-463b-9e62-49e3d6e36e38`)
+- **Space Mono (400)**: SpaceMono-Regular.woff2 (Source UUID: `3f711c08-0236-4c38-9271-9aa8daeab0ec`)
+- **Space Mono (400)**: SpaceMono-Regular.woff2 (Source UUID: `e21a676b-0a20-41e0-8eb7-a5340db66fcc`)
+- **Space Mono (400)**: SpaceMono-Regular.woff2 (Source UUID: `1c6180aa-ae5d-40d7-bcc7-7f19debe2d69`)
+- **Space Mono (700)**: SpaceMono-Bold.woff2 (Source UUID: `b41bf3fc-a29b-443f-9c15-1c3d36a37047`)
+- **Space Mono (700)**: SpaceMono-Bold.woff2 (Source UUID: `736b432d-236e-4c2f-a888-07ec8df218a0`)
+- **Space Mono (700)**: SpaceMono-Bold.woff2 (Source UUID: `8bdd60aa-41e9-4e0b-9c3a-1bdea17afa2e`)
+
+These files are loaded locally to allow the app to work correctly offline or in local area network (LAN) environments.
