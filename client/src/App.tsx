@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import socket from "./socket";
+import socket, { clientId } from "./socket";
 import { RoomState } from "./types";
 
 import Index from "./screens/Index";
@@ -39,20 +39,27 @@ export default function App() {
     };
   }, []);
 
-  const isHost = roomState?.hostId === socket.id;
+  const isHost = roomState?.hostId === clientId;
+
+  function handleAbandon() {
+    if (!roomState) return;
+    socket.emit("room:abandon", { code: roomState.code });
+    localStorage.removeItem("adm_clientId");
+    setRoomState(null);
+  }
 
   function renderScreen() {
     if (!roomState) return <Index />;
 
     switch (roomState.phase) {
       case "lobby":
-        return <Lobby roomState={roomState} isHost={isHost} />;
+        return <Lobby roomState={roomState} isHost={isHost} onAbandon={handleAbandon} />;
       case "question":
-        return <Game roomState={roomState} myId={socket.id} />;
+        return <Game roomState={roomState} myId={clientId} onAbandon={handleAbandon} />;
       case "results":
-        return <Results roomState={roomState} isHost={isHost} />;
+        return <Results roomState={roomState} isHost={isHost} onAbandon={handleAbandon} />;
       case "leaderboard":
-        return <Leaderboard roomState={roomState} isHost={isHost} />;
+        return <Leaderboard roomState={roomState} isHost={isHost} onAbandon={handleAbandon} />;
       case "gameover":
         return <GameOver roomState={roomState} />;
       default:

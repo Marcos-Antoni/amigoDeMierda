@@ -4,9 +4,10 @@ import { RoomState } from "../types";
 interface LobbyProps {
   roomState: RoomState;
   isHost: boolean;
+  onAbandon: () => void;
 }
 
-export default function Lobby({ roomState, isHost }: LobbyProps) {
+export default function Lobby({ roomState, isHost, onAbandon }: LobbyProps) {
   function handleStart() {
     socket.emit("game:start", { code: roomState.code });
   }
@@ -64,6 +65,13 @@ export default function Lobby({ roomState, isHost }: LobbyProps) {
             Esperando que el host inicie la partida...
           </div>
         )}
+        <button
+          onClick={onAbandon}
+          className="adm-btn adm-btn--secondary"
+          style={{ marginTop: '16px', fontSize: '13px', opacity: 0.7 }}
+        >
+          Abandonar sala
+        </button>
       </div>
     </div>
   );

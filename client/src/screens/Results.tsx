@@ -4,9 +4,10 @@ import { RoomState } from "../types";
 interface ResultsProps {
   roomState: RoomState;
   isHost: boolean;
+  onAbandon: () => void;
 }
 
-export default function Results({ roomState, isHost }: ResultsProps) {
+export default function Results({ roomState, isHost, onAbandon }: ResultsProps) {
   function handleNext() {
     socket.emit("game:next", { code: roomState.code });
   }
@@ -109,6 +110,15 @@ export default function Results({ roomState, isHost }: ResultsProps) {
             Esperando que el host continúe...
           </div>
         )}
+        <div style={{ textAlign: "center", marginTop: "16px" }}>
+          <button
+            onClick={onAbandon}
+            className="adm-btn adm-btn--secondary"
+            style={{ fontSize: "13px", opacity: 0.7 }}
+          >
+            Abandonar sala
+          </button>
+        </div>
       </div>
     </div>
   );

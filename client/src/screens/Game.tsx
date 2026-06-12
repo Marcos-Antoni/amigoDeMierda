@@ -5,9 +5,10 @@ import { RoomState } from "../types";
 interface GameProps {
   roomState: RoomState;
   myId?: string;
+  onAbandon: () => void;
 }
 
-export default function Game({ roomState, myId }: GameProps) {
+export default function Game({ roomState, myId, onAbandon }: GameProps) {
   const [selectedPlayerId, setSelectedPlayerId] = useState<string | null>(null);
   const [timeLeft, setTimeLeft] = useState(30);
 
@@ -39,8 +40,8 @@ export default function Game({ roomState, myId }: GameProps) {
       </div>
 
       <div className="adm-question-card">
-        <h2 
-          className="adm-question-text" 
+        <h2
+          className="adm-question-text"
           style={{ color: roomState.currentQuestion?.hot ? "var(--pink)" : "inherit" }}
         >
           {roomState.currentQuestion?.question ?? "Cargando pregunta..."}
@@ -85,6 +86,16 @@ export default function Game({ roomState, myId }: GameProps) {
           </div>
         </>
       )}
+
+      <div style={{ textAlign: "center", marginTop: "24px" }}>
+        <button
+          onClick={onAbandon}
+          className="adm-btn adm-btn--secondary"
+          style={{ fontSize: "13px", opacity: 0.7 }}
+        >
+          Abandonar sala
+        </button>
+      </div>
     </div>
   );
 }

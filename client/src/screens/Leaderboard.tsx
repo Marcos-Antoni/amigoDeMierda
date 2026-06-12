@@ -4,9 +4,10 @@ import { RoomState } from "../types";
 interface LeaderboardProps {
   roomState: RoomState;
   isHost: boolean;
+  onAbandon: () => void;
 }
 
-export default function Leaderboard({ roomState, isHost }: LeaderboardProps) {
+export default function Leaderboard({ roomState, isHost, onAbandon }: LeaderboardProps) {
   const sorted = [...roomState.players].sort((a, b) => b.score - a.score);
   const maxScore = sorted.length > 0 ? sorted[0].score : 0;
 
@@ -70,6 +71,15 @@ export default function Leaderboard({ roomState, isHost }: LeaderboardProps) {
             Esperando que el host continúe...
           </div>
         )}
+        <div style={{ textAlign: "center", marginTop: "16px" }}>
+          <button
+            onClick={onAbandon}
+            className="adm-btn adm-btn--secondary"
+            style={{ fontSize: "13px", opacity: 0.7 }}
+          >
+            Abandonar sala
+          </button>
+        </div>
       </div>
     </div>
   );

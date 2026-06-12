@@ -44,6 +44,7 @@ export function createRoom(hostId: string, hostName: string): GameState {
     votes: {},
     questionIndex: -1,
     questionOrder: [],
+    lastActivity: Date.now(),
   };
   rooms.set(code, state);
   return state;
@@ -62,11 +63,24 @@ export function joinRoom(
 ): { state: GameState } | { error: string } {
   const state = rooms.get(code);
   if (!state) return { error: "Room not found." };
-  if (state.phase !== "lobby") return { error: "Game already in progress." };
   if (state.players.length >= MAX_PLAYERS) return { error: "Room is full." };
-  if (state.players.some((p) => p.id === playerId)) return { state }; // already in
+  if (state.players.some((p) => p.id === playerId)) {
+    state.lastActivity = Date.now();
+    return { state }; // already in
+  }
 
   state.players.push({ id: playerId, name: playerName, score: 0 });
+
+  // If a vote round is already complete, auto-advance for the new player.
+  if (
+    state.phase === "question" &&
+    Object.keys(state.votes).length >= state.players.length - 1
+  ) {
+    applyTally(state);
+    state.phase = "results";
+  }
+
+  state.lastActivity = Date.now();
   return { state };
 }
 
@@ -119,6 +133,7 @@ export function leaveRoom(
       state.phase = "results";
     }
 
+    state.lastActivity = Date.now();
     return { code, state, hostChanged, newHostName };
   }
   return null; // player was not in any room
@@ -128,6 +143,39 @@ export function leaveRoom(
 export function getRoom(code: string): GameState | null {
   return rooms.get(code) ?? null;
 }
+
+/**
+ * Find an existing room where this clientId is a player.
+ * Returns { code, state } on success, or { error } if not found.
+ * Updates lastActivity on the matched room.
+ */
+export function reconnectPlayer(
+  clientId: string
+): { code: string; state: GameState } | { error: string } {
+  for (const [code, state] of rooms) {
+    if (state.players.some((p) => p.id === clientId)) {
+      state.lastActivity = Date.now();
+      return { code, state };
+    }
+  }
+  return { error: "No active session found." };
+}
+
+// ---------------------------------------------------------------------------
+// TTL sweep — removes abandoned rooms that never reached gameover.
+// ---------------------------------------------------------------------------
+
+const ROOM_TTL_MS = 30 * 60 * 1000;
+const SWEEP_INTERVAL_MS = 5 * 60 * 1000;
+
+setInterval(() => {
+  const now = Date.now();
+  for (const [code, state] of rooms) {
+    if (now - state.lastActivity > ROOM_TTL_MS) {
+      rooms.delete(code);
+    }
+  }
+}, SWEEP_INTERVAL_MS).unref();
 
 // ---------------------------------------------------------------------------
 // Private helper — votes-received scoring model.
@@ -193,6 +241,7 @@ export function startGame(
   }
 
   state.phase = "question";
+  state.lastActivity = Date.now();
   return { state };
 }
 
@@ -222,6 +271,7 @@ export function recordVote(
     state.phase = "results";
   }
 
+  state.lastActivity = Date.now();
   return { state };
 }
 
@@ -238,6 +288,7 @@ export function advanceGame(
 
   if (state.phase === "results") {
     state.phase = "leaderboard";
+    state.lastActivity = Date.now();
     return { state };
   }
 
@@ -246,13 +297,17 @@ export function advanceGame(
     const nextIndex = state.questionIndex + 1;
     if (hasWinner || nextIndex >= state.questionOrder.length) {
       state.phase = "gameover";
+      state.lastActivity = Date.now();
+      rooms.delete(code);
+      return { state };
     } else {
       state.questionIndex = nextIndex;
       state.currentQuestion = state.questionOrder[nextIndex];
       state.votes = {};
       state.phase = "question";
+      state.lastActivity = Date.now();
+      return { state };
     }
-    return { state };
   }
 
   return { error: "Cannot advance from the current phase." };
