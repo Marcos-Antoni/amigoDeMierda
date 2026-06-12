@@ -19,4 +19,5 @@ export interface GameState {
   votes: Record<string, string>; // voterId -> targetId
   questionIndex: number;   // position into questionOrder; -1 in lobby
   questionOrder: Question[]; // shuffled questions, set at game:start; [] in lobby
+  lastActivity: number; // Unix epoch ms — updated on every state-mutating operation
 }

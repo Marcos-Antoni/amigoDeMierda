@@ -1,0 +1,16 @@
+node_modules
+**/node_modules
+.git
+.gitignore
+*.md
+*.html
+openspec
+design-reference
+dist
+**/dist
+.env
+.env.*
+.DS_Store
+*.log
+.vscode
+.idea
