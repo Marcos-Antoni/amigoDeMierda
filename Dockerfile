@@ -3,8 +3,8 @@ FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-# Copy workspace manifests first for layer caching
-COPY package.json ./
+# Copy workspace manifests and lockfile first for layer caching
+COPY package.json package-lock.json ./
 COPY client/package.json ./client/
 COPY server/package.json ./server/
 
@@ -21,11 +21,11 @@ FROM node:22-alpine AS runner
 
 WORKDIR /app
 
-COPY package.json ./
+COPY package.json package-lock.json ./
+COPY client/package.json ./client/
 COPY server/package.json ./server/
 
-# Install only server production dependencies
-WORKDIR /app/server
+# Install production dependencies (workspaces hoist to /app/node_modules)
 RUN npm ci --omit=dev
 
 # Copy compiled server code
